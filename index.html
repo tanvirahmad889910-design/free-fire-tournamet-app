@@ -1,0 +1,262 @@
+```html
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FF Tournament</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0b0b12;
+      color: white;
+    }
+
+    .app {
+      max-width: 500px;
+      margin: auto;
+      min-height: 100vh;
+      padding-bottom: 80px;
+    }
+
+    header {
+      padding: 22px 18px;
+      background: #151522;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #ffb000;
+    }
+
+    .profile {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #ffb000;
+      color: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .hero {
+      margin: 18px;
+      padding: 25px 20px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #ffb000, #ff5e00);
+      color: #111;
+    }
+
+    .hero h1 {
+      font-size: 27px;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #111;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 5px 18px;
+    }
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .section-title h2 {
+      font-size: 19px;
+    }
+
+    .section-title a {
+      color: #ffb000;
+      font-size: 13px;
+    }
+
+    .tournament {
+      background: #151522;
+      border-radius: 15px;
+      padding: 16px;
+      margin-bottom: 12px;
+      border: 1px solid #242438;
+    }
+
+    .tournament-top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .tournament h3 {
+      font-size: 17px;
+    }
+
+    .status {
+      color: #4cff88;
+      font-size: 12px;
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      color: #aaa;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 500px;
+      height: 65px;
+      background: #151522;
+      border-top: 1px solid #29293b;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .nav-item {
+      color: #888;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .nav-item.active {
+      color: #ffb000;
+    }
+
+    .nav-icon {
+      display: block;
+      font-size: 21px;
+      margin-bottom: 3px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <header>
+    <div class="logo">FF <span>TOURNAMENT</span></div>
+    <div class="profile">T</div>
+  </header>
+
+  <div class="hero">
+    <h1>Free Fire Tournament 🔥</h1>
+    <p>Join tournaments, compete with players and win exciting prizes!</p>
+    <a href="#" class="btn">Join Tournament</a>
+  </div>
+
+  <div class="section">
+
+    <div class="section-title">
+      <h2>🔥 Live Tournaments</h2>
+      <a href="#">View All</a>
+    </div>
+
+    <div class="tournament">
+      <div class="tournament-top">
+        <h3>⚔️ Friday Night Battle</h3>
+        <span class="status">● LIVE</span>
+      </div>
+
+      <p>Free Fire Squad Tournament</p>
+
+      <div class="info">
+        <span>👥 48/50 Teams</span>
+        <span>🏆 ৳5,000</span>
+      </div>
+    </div>
+
+    <div class="tournament">
+      <div class="tournament-top">
+        <h3>🏆 Weekly Championship</h3>
+        <span class="status">OPEN</span>
+      </div>
+
+      <p>Squad • Bermuda</p>
+
+      <div class="info">
+        <span>👥 32/50 Teams</span>
+        <span>🏆 ৳10,000</span>
+      </div>
+    </div>
+
+    <div class="tournament">
+      <div class="tournament-top">
+        <h3>🔥 Pro League</h3>
+        <span class="status">OPEN</span>
+      </div>
+
+      <p>Clash Squad Tournament</p>
+
+      <div class="info">
+        <span>👥 20/32 Teams</span>
+        <span>🏆 ৳20,000</span>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="bottom-nav">
+  <div class="nav-item active">
+    <span class="nav-icon">🏠</span>
+    Home
+  </div>
+
+  <div class="nav-item">
+    <span class="nav-icon">🏆</span>
+    Tournaments
+  </div>
+
+  <div class="nav-item">
+    <span class="nav-icon">👥</span>
+    Teams
+  </div>
+
+  <div class="nav-item">
+    <span class="nav-icon">👤</span>
+    Profile
+  </div>
+</div>
+
+</body>
+</html>
+```
