@@ -1,0 +1,242 @@
+```html
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tournament Details - FF Tournament</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0b0b12;
+      color: white;
+      padding-bottom: 30px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .hero {
+      padding: 35px 20px;
+      background: linear-gradient(135deg, #ffb000, #ff5e00);
+      color: #111;
+    }
+
+    .back {
+      display: inline-block;
+      color: #111;
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      font-size: 14px;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .card {
+      background: #151522;
+      border: 1px solid #29293b;
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      color: #ffb000;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .detail {
+      background: #0d0d16;
+      padding: 14px;
+      border-radius: 12px;
+    }
+
+    .detail small {
+      display: block;
+      color: #888;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+
+    .detail strong {
+      font-size: 15px;
+    }
+
+    .prize {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid #29293b;
+    }
+
+    .prize:last-child {
+      border-bottom: none;
+    }
+
+    .rules {
+      padding-left: 20px;
+      color: #bbb;
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    .register {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      background: linear-gradient(135deg, #ffb000, #ff5e00);
+      color: #111;
+      font-weight: bold;
+      padding: 15px;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+
+    .status {
+      display: inline-block;
+      background: #173c22;
+      color: #64ff8a;
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="hero">
+    <a class="back" href="index.html">← Back to Home</a>
+
+    <h1>🏆 Weekly Championship</h1>
+    <p>Free Fire Squad Tournament</p>
+
+    <span class="status">● REGISTRATION OPEN</span>
+  </div>
+
+  <div class="content">
+
+    <div class="card">
+      <h2>📋 Tournament Information</h2>
+
+      <div class="details">
+
+        <div class="detail">
+          <small>💰 Prize Pool</small>
+          <strong>৳10,000</strong>
+        </div>
+
+        <div class="detail">
+          <small>🎟️ Entry Fee</small>
+          <strong>৳200 / Team</strong>
+        </div>
+
+        <div class="detail">
+          <small>📅 Date</small>
+          <strong>Coming Soon</strong>
+        </div>
+
+        <div class="detail">
+          <small>⏰ Time</small>
+          <strong>Coming Soon</strong>
+        </div>
+
+        <div class="detail">
+          <small>🎮 Mode</small>
+          <strong>Squad</strong>
+        </div>
+
+        <div class="detail">
+          <small>🗺️ Map</small>
+          <strong>Bermuda</strong>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="card">
+      <h2>🏅 Prize Distribution</h2>
+
+      <div class="prize">
+        <span>🥇 1st Place</span>
+        <strong>৳5,000</strong>
+      </div>
+
+      <div class="prize">
+        <span>🥈 2nd Place</span>
+        <strong>৳3,000</strong>
+      </div>
+
+      <div class="prize">
+        <span>🥉 3rd Place</span>
+        <strong>৳2,000</strong>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <h2>📜 Tournament Rules</h2>
+
+      <ol class="rules">
+        <li>প্রতিটি Team-এ 4 জন Player থাকতে হবে।</li>
+        <li>সঠিক Free Fire UID দিতে হবে।</li>
+        <li>Hack বা third-party software ব্যবহার করা যাবে না।</li>
+        <li>Match শুরু হওয়ার আগে Room ID ও Password দেওয়া হবে।</li>
+        <li>অন্য Team-এর সাথে অসদাচরণ করলে disqualify করা হতে পারে।</li>
+        <li>Admin-এর সিদ্ধান্ত চূড়ান্ত।</li>
+      </ol>
+    </div>
+
+
+    <div class="card">
+      <h2>📢 Important Notice</h2>
+
+      <p style="color:#bbb; line-height:1.7; font-size:14px;">
+        Registration করার সময় Team Name, Player Name, UID এবং
+        Payment Transaction ID সঠিকভাবে প্রদান করুন।
+        ভুল তথ্যের কারণে registration বাতিল হতে পারে।
+      </p>
+
+      <a class="register" href="registration.html">
+        🔥 Register Your Team
+      </a>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
+```
