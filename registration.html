@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Team Registration - FF Tournament</title>
+
+  <title>Team Registration | FF Tournament</title>
 
   <style>
     * {
@@ -24,33 +25,36 @@
       margin: auto;
     }
 
-    h1 {
+    .header {
       text-align: center;
-      color: #ffb000;
-      margin: 15px 0 8px;
+      margin: 15px 0 25px;
     }
 
-    .subtitle {
-      text-align: center;
+    .header h1 {
+      color: #ffb000;
+      font-size: 27px;
+    }
+
+    .header p {
       color: #999;
-      margin-bottom: 25px;
+      margin-top: 7px;
       font-size: 14px;
     }
 
-    .box {
+    .form-box {
       background: #151522;
-      padding: 20px;
-      border-radius: 18px;
       border: 1px solid #29293b;
+      border-radius: 18px;
+      padding: 20px;
     }
 
-    h2 {
+    .section-title {
       color: #ffb000;
-      font-size: 17px;
+      font-size: 18px;
       margin: 20px 0 12px;
     }
 
-    h2:first-child {
+    .section-title:first-child {
       margin-top: 0;
     }
 
@@ -61,51 +65,63 @@
       margin: 12px 0 7px;
     }
 
-    input, select {
+    input,
+    select {
       width: 100%;
       padding: 13px;
       border-radius: 10px;
       border: 1px solid #303044;
       background: #0d0d16;
       color: white;
-      outline: none;
       font-size: 14px;
+      outline: none;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #ffb000;
     }
 
     .player {
       background: #0e0e18;
-      padding: 12px;
+      padding: 13px;
       border-radius: 12px;
       margin-bottom: 12px;
     }
 
-    button {
+    .submit-btn {
       width: 100%;
-      border: 0;
       padding: 15px;
       margin-top: 20px;
+      border: none;
       border-radius: 12px;
       background: linear-gradient(135deg, #ffb000, #ff5e00);
       color: #111;
       font-size: 16px;
       font-weight: bold;
+      cursor: pointer;
     }
 
-    #message {
+    .submit-btn:disabled {
+      opacity: 0.6;
+    }
+
+    .message {
       display: none;
       margin-top: 15px;
       padding: 15px;
       border-radius: 12px;
       text-align: center;
+      line-height: 1.6;
     }
 
     .success {
       background: #12351e;
-      color: #75ff99;
+      color: #72ff96;
     }
 
     .error {
-      background: #3b1515;
+      background: #3a1515;
       color: #ff7777;
     }
 
@@ -113,8 +129,8 @@
       display: block;
       text-align: center;
       color: #aaa;
-      margin-top: 18px;
       text-decoration: none;
+      margin-top: 18px;
     }
   </style>
 </head>
@@ -123,16 +139,20 @@
 
 <div class="container">
 
-  <h1>🔥 Team Registration</h1>
-  <p class="subtitle">Free Fire Tournament</p>
+  <div class="header">
+    <h1>🔥 Team Registration</h1>
+    <p>Free Fire Tournament</p>
+  </div>
 
-  <div class="box">
+  <div class="form-box">
 
     <form id="registrationForm">
 
-      <h2>🏆 Tournament</h2>
+      <!-- Tournament -->
+      <div class="section-title">🏆 Tournament</div>
 
-      <label>Tournament</label>
+      <label>Tournament নির্বাচন করুন</label>
+
       <select id="tournament" required>
         <option value="">Select Tournament</option>
         <option>Friday Night Battle</option>
@@ -141,79 +161,176 @@
       </select>
 
 
-      <h2>👥 Team Information</h2>
+      <!-- Team -->
+      <div class="section-title">👥 Team Information</div>
 
       <label>Team Name</label>
-      <input id="teamName" type="text" placeholder="Team Name" required>
+      <input
+        id="teamName"
+        type="text"
+        placeholder="তোমার Team Name"
+        required
+      >
 
       <label>Captain Name</label>
-      <input id="captainName" type="text" placeholder="Captain Name" required>
+      <input
+        id="captainName"
+        type="text"
+        placeholder="Captain-এর নাম"
+        required
+      >
 
-      <label>WhatsApp / Phone</label>
-      <input id="phone" type="tel" placeholder="01XXXXXXXXX" required>
+      <label>WhatsApp / Phone Number</label>
+      <input
+        id="phone"
+        type="tel"
+        placeholder="01XXXXXXXXX"
+        required
+      >
 
 
-      <h2>🎮 Players</h2>
+      <!-- Players -->
+      <div class="section-title">🎮 Player Information</div>
 
       <div class="player">
+
         <label>Player 1 — Captain</label>
-        <input id="player1" type="text" placeholder="Player Name" required>
+
+        <input
+          id="player1"
+          type="text"
+          placeholder="Player Name"
+          required
+        >
 
         <label>Free Fire UID</label>
-        <input id="uid1" type="text" placeholder="UID" required>
+
+        <input
+          id="uid1"
+          type="text"
+          placeholder="Free Fire UID"
+          required
+        >
+
       </div>
 
+
       <div class="player">
+
         <label>Player 2</label>
-        <input id="player2" type="text" placeholder="Player Name" required>
+
+        <input
+          id="player2"
+          type="text"
+          placeholder="Player Name"
+          required
+        >
 
         <label>Free Fire UID</label>
-        <input id="uid2" type="text" placeholder="UID" required>
+
+        <input
+          id="uid2"
+          type="text"
+          placeholder="Free Fire UID"
+          required
+        >
+
       </div>
 
+
       <div class="player">
+
         <label>Player 3</label>
-        <input id="player3" type="text" placeholder="Player Name" required>
+
+        <input
+          id="player3"
+          type="text"
+          placeholder="Player Name"
+          required
+        >
 
         <label>Free Fire UID</label>
-        <input id="uid3" type="text" placeholder="UID" required>
+
+        <input
+          id="uid3"
+          type="text"
+          placeholder="Free Fire UID"
+          required
+        >
+
       </div>
+
 
       <div class="player">
+
         <label>Player 4</label>
-        <input id="player4" type="text" placeholder="Player Name" required>
+
+        <input
+          id="player4"
+          type="text"
+          placeholder="Player Name"
+          required
+        >
 
         <label>Free Fire UID</label>
-        <input id="uid4" type="text" placeholder="UID" required>
+
+        <input
+          id="uid4"
+          type="text"
+          placeholder="Free Fire UID"
+          required
+        >
+
       </div>
 
 
-      <h2>💳 Payment</h2>
+      <!-- Payment -->
+      <div class="section-title">💳 Payment</div>
 
       <label>Payment Method</label>
-      <select id="payment" required>
-        <option value="">Select Method</option>
+
+      <select id="paymentMethod" required>
+        <option value="">Select Payment Method</option>
         <option>bKash</option>
         <option>Nagad</option>
         <option>Rocket</option>
       </select>
 
+
       <label>Transaction ID</label>
-      <input id="transactionId" type="text"
-             placeholder="Transaction ID" required>
+
+      <input
+        id="transactionId"
+        type="text"
+        placeholder="Transaction ID"
+        required
+      >
 
 
-      <button type="submit" id="submitBtn">
+      <button
+        class="submit-btn"
+        id="submitBtn"
+        type="submit"
+      >
         ✅ Submit Registration
       </button>
 
-      <div id="message"></div>
+
+      <div
+        id="message"
+        class="message"
+      ></div>
 
     </form>
 
   </div>
 
-  <a class="back" href="index.html">← Back to Home</a>
+  <a
+    class="back"
+    href="index.html"
+  >
+    ← Back to Home
+  </a>
 
 </div>
 
@@ -228,39 +345,72 @@
     collection,
     addDoc,
     serverTimestamp
-  } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+  }
+    from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
+
+  // Firebase Configuration
 
   const firebaseConfig = {
+
     apiKey: "AIzaSyDN9yr2JTG5bG0o46kW4gae8vM4f4d4l3M",
-    authDomain: "ff-tournament-c9a0b.firebaseapp.com",
-    projectId: "ff-tournament-c9a0b",
-    storageBucket: "ff-tournament-c9a0b.firebasestorage.app",
-    messagingSenderId: "59873774109",
-    appId: "1:59873774109:web:229f05e2b53631dd4b14f4",
-    measurementId: "G-P005P15RK4"
+
+    authDomain:
+      "ff-tournament-c9a0b.firebaseapp.com",
+
+    projectId:
+      "ff-tournament-c9a0b",
+
+    storageBucket:
+      "ff-tournament-c9a0b.firebasestorage.app",
+
+    messagingSenderId:
+      "59873774109",
+
+    appId:
+      "1:59873774109:web:229f05e2b53631dd4b14f4",
+
+    measurementId:
+      "G-P005P15RK4"
+
   };
 
 
+  // Initialize Firebase
+
   const app = initializeApp(firebaseConfig);
+
   const db = getFirestore(app);
 
 
-  document
-    .getElementById("registrationForm")
-    .addEventListener("submit", async function(e) {
+  // Form Submit
 
-      e.preventDefault();
+  const form =
+    document.getElementById("registrationForm");
 
-      const button = document.getElementById("submitBtn");
-      const message = document.getElementById("message");
+  const button =
+    document.getElementById("submitBtn");
+
+  const message =
+    document.getElementById("message");
+
+
+  form.addEventListener(
+    "submit",
+    async function(event) {
+
+      event.preventDefault();
+
 
       button.disabled = true;
-      button.textContent = "Submitting...";
+
+      button.textContent =
+        "⏳ Submitting...";
+
 
       try {
 
-        await addDoc(collection(db, "registrations"), {
+        const registrationData = {
 
           tournament:
             document.getElementById("tournament").value,
@@ -274,61 +424,113 @@
           phone:
             document.getElementById("phone").value.trim(),
 
+
           players: [
+
             {
-              name: document.getElementById("player1").value.trim(),
-              uid: document.getElementById("uid1").value.trim()
+              name:
+                document.getElementById("player1").value.trim(),
+
+              uid:
+                document.getElementById("uid1").value.trim()
             },
+
             {
-              name: document.getElementById("player2").value.trim(),
-              uid: document.getElementById("uid2").value.trim()
+              name:
+                document.getElementById("player2").value.trim(),
+
+              uid:
+                document.getElementById("uid2").value.trim()
             },
+
             {
-              name: document.getElementById("player3").value.trim(),
-              uid: document.getElementById("uid3").value.trim()
+              name:
+                document.getElementById("player3").value.trim(),
+
+              uid:
+                document.getElementById("uid3").value.trim()
             },
+
             {
-              name: document.getElementById("player4").value.trim(),
-              uid: document.getElementById("uid4").value.trim()
+              name:
+                document.getElementById("player4").value.trim(),
+
+              uid:
+                document.getElementById("uid4").value.trim()
             }
+
           ],
 
+
           paymentMethod:
-            document.getElementById("payment").value,
+            document.getElementById("paymentMethod").value,
 
           transactionId:
             document.getElementById("transactionId").value.trim(),
 
+
+          // Admin approval-এর জন্য
+
           status: "pending",
 
-          createdAt: serverTimestamp()
 
-        });
+          createdAt:
+            serverTimestamp()
+
+        };
 
 
-        message.className = "success";
-        message.style.display = "block";
+        // Firebase Firestore-এ Save
+
+        await addDoc(
+          collection(db, "registrations"),
+          registrationData
+        );
+
+
+        // Success
+
+        message.className =
+          "message success";
+
+        message.style.display =
+          "block";
+
         message.innerHTML =
-          "🎉 Registration সফল হয়েছে!<br>" +
-          "Admin verification-এর পর Team approve হবে.";
+          "🎉 <b>Registration Successful!</b><br>" +
+          "তোমার Team registration জমা হয়েছে।<br>" +
+          "Admin verification-এর পর status update হবে।";
 
-        document.getElementById("registrationForm").reset();
+
+        form.reset();
+
 
       } catch (error) {
 
         console.error(error);
 
-        message.className = "error";
-        message.style.display = "block";
-        message.textContent =
-          "❌ Registration হয়নি। আবার চেষ্টা করুন।";
+
+        message.className =
+          "message error";
+
+        message.style.display =
+          "block";
+
+        message.innerHTML =
+          "❌ Registration submit হয়নি।<br>" +
+          "Internet connection এবং Firebase settings check করুন।";
 
       }
 
-      button.disabled = false;
-      button.textContent = "✅ Submit Registration";
 
-    });
+      button.disabled = false;
+
+      button.textContent =
+        "✅ Submit Registration";
+
+    }
+
+  );
 
 </script>
 
